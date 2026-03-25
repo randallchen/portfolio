@@ -12,5 +12,6 @@ dependencies = [
     "numpy>=2.0.2",
     "pandas>=2.3.3",
     "prefect>=3.4.25",
+    "pyarrow>=21.0.0",
     "requests>=2.32.5",
 ]
