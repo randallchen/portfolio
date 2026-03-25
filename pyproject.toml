@@ -8,5 +8,6 @@ dependencies = [
     "dbt>=1.0.0.40.15",
     "numpy>=2.0.2",
     "pandas>=2.3.3",
+    "prefect>=3.4.25",
     "requests>=2.32.5",
 ]
