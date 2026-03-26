@@ -8,7 +8,6 @@
 - [ ] Raw layer change (schema, format, partitioning)
 - [ ] dbt model (new or modified)
 - [ ] Data quality test
-- [ ] Braze sync / activation logic
 - [ ] Orchestration (DAG / flow change)
 - [ ] Bug fix
 - [ ] Refactor / cleanup

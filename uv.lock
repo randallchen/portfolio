@@ -1434,6 +1434,18 @@ wheels = [
 ]
 
 [[package]]
+name = "graphql-core"
+version = "3.2.8"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "typing-extensions", marker = "python_full_version < '3.10'" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/68/c5/36aa96205c3ecbb3d34c7c24189e4553c7ca2ebc7e1dd07432339b980272/graphql_core-3.2.8.tar.gz", hash = "sha256:015457da5d996c924ddf57a43f4e959b0b94fb695b85ed4c29446e508ed65cf3", size = 513181, upload-time = "2026-03-05T19:55:37.332Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/86/41/cb887d9afc5dabd78feefe6ccbaf83ff423c206a7a1b7aeeac05120b2125/graphql_core-3.2.8-py3-none-any.whl", hash = "sha256:cbee07bee1b3ed5e531723685369039f32ff815ef60166686e0162f540f1520c", size = 207349, upload-time = "2026-03-05T19:55:35.911Z" },
+]
+
+[[package]]
 name = "graphviz"
 version = "0.21"
 source = { registry = "https://pypi.org/simple" }
@@ -3124,6 +3136,8 @@ dependencies = [
     { name = "pandas", version = "3.0.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
     { name = "prefect", version = "3.4.25", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
     { name = "prefect", version = "3.6.23", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
+    { name = "prefect-dbt", version = "0.7.8", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
+    { name = "prefect-dbt", version = "0.7.20", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
     { name = "pyarrow", version = "21.0.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
     { name = "pyarrow", version = "23.0.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
     { name = "requests", version = "2.32.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
@@ -3139,6 +3153,7 @@ requires-dist = [
     { name = "numpy", specifier = ">=2.0.2" },
     { name = "pandas", specifier = ">=2.3.3" },
     { name = "prefect", specifier = ">=3.4.25" },
+    { name = "prefect-dbt", specifier = ">=0.7.8" },
     { name = "pyarrow", specifier = ">=21.0.0" },
     { name = "requests", specifier = ">=2.32.5" },
 ]
@@ -3291,6 +3306,96 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/35/20/6bdc5b412233d0657cd1192152c1c515b61633275f16c1f8a55e9b057048/prefect-3.6.23.tar.gz", hash = "sha256:23b7071e6dcdae68fe8e5b334097fc1833c4695207a41de2b23779e2aec76143", size = 11000627, upload-time = "2026-03-20T12:04:08.793Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/7a/33/0c3b28ff7dcb6b0bde145d6057785584bc1622d39bc48ea5af486faf4329/prefect-3.6.23-py3-none-any.whl", hash = "sha256:9ff1d82f399ced433ac794b23fb7b9426cd27b9e6e3610a1cdf5c4facb8975a2", size = 11833004, upload-time = "2026-03-20T12:04:05.467Z" },
+]
+
+[[package]]
+name = "prefect-dbt"
+version = "0.7.8"
+source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "python_full_version < '3.10'",
+]
+dependencies = [
+    { name = "dbt-core", version = "1.10.20", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
+    { name = "prefect", version = "3.4.25", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
+    { name = "prefect-shell", version = "0.3.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
+    { name = "sgqlc", marker = "python_full_version < '3.10'" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/6a/df/f58b182afa0e1aadfd2ce7cc748eaae32acad6829c0af6a75a8bb3002c08/prefect_dbt-0.7.8.tar.gz", hash = "sha256:1a626db6f7b9014d9d27c2f2fa708bd8d56e1e3b566f9985bc7507f0bcedff5f", size = 75280, upload-time = "2025-09-18T15:50:56.183Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/86/d3/e834cbd371d30cff70d791943c9c1c877d6e0712d7958cf735960bfd133f/prefect_dbt-0.7.8-py3-none-any.whl", hash = "sha256:de8f86dbbe64342e0d3f5d2cba17ad49b1301985a5886e84e4c279a85275a1a5", size = 55899, upload-time = "2025-09-18T15:50:54.683Z" },
+]
+
+[[package]]
+name = "prefect-dbt"
+version = "0.7.20"
+source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "python_full_version >= '3.14' and sys_platform == 'win32'",
+    "python_full_version >= '3.14' and sys_platform == 'emscripten'",
+    "python_full_version >= '3.14' and sys_platform != 'emscripten' and sys_platform != 'win32'",
+    "python_full_version == '3.13.*' and sys_platform == 'win32'",
+    "python_full_version == '3.12.*' and sys_platform == 'win32'",
+    "python_full_version == '3.11.*' and sys_platform == 'win32'",
+    "python_full_version == '3.13.*' and sys_platform == 'emscripten'",
+    "python_full_version == '3.12.*' and sys_platform == 'emscripten'",
+    "python_full_version == '3.11.*' and sys_platform == 'emscripten'",
+    "python_full_version == '3.13.*' and sys_platform != 'emscripten' and sys_platform != 'win32'",
+    "python_full_version == '3.12.*' and sys_platform != 'emscripten' and sys_platform != 'win32'",
+    "python_full_version == '3.11.*' and sys_platform != 'emscripten' and sys_platform != 'win32'",
+    "python_full_version == '3.10.*'",
+]
+dependencies = [
+    { name = "dbt-core", version = "1.11.7", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
+    { name = "prefect", version = "3.6.23", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
+    { name = "prefect-shell", version = "0.3.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
+    { name = "sgqlc", marker = "python_full_version >= '3.10'" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/d3/44/ab52048406674070979daa11038520ef14873f709bd3c95452c3e440ec2a/prefect_dbt-0.7.20.tar.gz", hash = "sha256:074ac064b0bd7c87d8bc479094d79191b113f2dcaeac20d0d40d3152292ae17a", size = 210236, upload-time = "2026-03-05T21:09:44.944Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/9c/dd/1a57cd5093d58983a38f247e6683147525b25844dcdfde3fc3539346261b/prefect_dbt-0.7.20-py3-none-any.whl", hash = "sha256:8ca9333e573869fc67d736a3b1fc4f1162b76a7c38b518bbac28a1b004a06b45", size = 109638, upload-time = "2026-03-05T21:09:43.273Z" },
+]
+
+[[package]]
+name = "prefect-shell"
+version = "0.3.1"
+source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "python_full_version < '3.10'",
+]
+dependencies = [
+    { name = "prefect", version = "3.4.25", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/55/62/b0451cde96825679ba9299c10a1c148c17e20873be62c839f2f64b9805e5/prefect_shell-0.3.1.tar.gz", hash = "sha256:48e6287789679a4e175118b1e77375668acbd7f0aae2f72f5d359da7cdef5e12", size = 14144, upload-time = "2024-11-15T17:16:42.704Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/2d/16/3e8c6e7c322464c9963b1bbf90cc0286dbd3789e4e251dc9c7a02f540224/prefect_shell-0.3.1-py3-none-any.whl", hash = "sha256:44bd65f659a803fbaa811732b2443bfef069eceefdef1f8a58f39a4defb3f5cf", size = 11097, upload-time = "2024-11-15T17:16:40.766Z" },
+]
+
+[[package]]
+name = "prefect-shell"
+version = "0.3.5"
+source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "python_full_version >= '3.14' and sys_platform == 'win32'",
+    "python_full_version >= '3.14' and sys_platform == 'emscripten'",
+    "python_full_version >= '3.14' and sys_platform != 'emscripten' and sys_platform != 'win32'",
+    "python_full_version == '3.13.*' and sys_platform == 'win32'",
+    "python_full_version == '3.12.*' and sys_platform == 'win32'",
+    "python_full_version == '3.11.*' and sys_platform == 'win32'",
+    "python_full_version == '3.13.*' and sys_platform == 'emscripten'",
+    "python_full_version == '3.12.*' and sys_platform == 'emscripten'",
+    "python_full_version == '3.11.*' and sys_platform == 'emscripten'",
+    "python_full_version == '3.13.*' and sys_platform != 'emscripten' and sys_platform != 'win32'",
+    "python_full_version == '3.12.*' and sys_platform != 'emscripten' and sys_platform != 'win32'",
+    "python_full_version == '3.11.*' and sys_platform != 'emscripten' and sys_platform != 'win32'",
+    "python_full_version == '3.10.*'",
+]
+dependencies = [
+    { name = "prefect", version = "3.6.23", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/81/5c/b9f3d71538df86317caaad6005e19df31846aac1a2aac83befe401aeb2a7/prefect_shell-0.3.5.tar.gz", hash = "sha256:4eaeba6d2845a3c2c6765f8d77ff5335f6032223bf210db419690ce8c0753324", size = 17915, upload-time = "2026-03-10T16:34:29.507Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/35/94/e6355d98d26d0a50760e28a5b76452fa525ee000e0decedf42a68a2df7ae/prefect_shell-0.3.5-py3-none-any.whl", hash = "sha256:04fd8b90970ec3820efa2aba9f65294e36c5966b440c171e03fc7680bfc2b8ac", size = 11973, upload-time = "2026-03-10T16:34:27.624Z" },
 ]
 
 [[package]]
@@ -4793,6 +4898,18 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/4f/db/cfac1baf10650ab4d1c111714410d2fbb77ac5a616db26775db562c8fab2/setuptools-82.0.1.tar.gz", hash = "sha256:7d872682c5d01cfde07da7bccc7b65469d3dca203318515ada1de5eda35efbf9", size = 1152316, upload-time = "2026-03-09T12:47:17.221Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/9d/76/f789f7a86709c6b087c5a2f52f911838cad707cc613162401badc665acfe/setuptools-82.0.1-py3-none-any.whl", hash = "sha256:a59e362652f08dcd477c78bb6e7bd9d80a7995bc73ce773050228a348ce2e5bb", size = 1006223, upload-time = "2026-03-09T12:47:15.026Z" },
+]
+
+[[package]]
+name = "sgqlc"
+version = "18"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "graphql-core" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/13/60/3b8c93b3d5df873bd13bc8fe0a4021d5f7442ca7ee6b98c5152dd55e18c7/sgqlc-18.tar.gz", hash = "sha256:a09f76fb69a2760523144f8d3acbf06a1b3710f63bf87fbac142d3538b1d639b", size = 245818, upload-time = "2026-02-06T19:56:23.957Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/da/96/8a5b972de8ede610aa088360927411b05c50ebcd669e52b0a3bfd1ed3ed9/sgqlc-18-py3-none-any.whl", hash = "sha256:7af53b5c1aab4602a98a36d6d32bd641e33f602b9b72468885f2505c59c536af", size = 86121, upload-time = "2026-02-06T19:56:22.07Z" },
 ]
 
 [[package]]

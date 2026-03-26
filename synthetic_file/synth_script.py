@@ -1,6 +1,6 @@
 """
 Synthetic e-commerce customer dataset generator
-Produces 10,000 records → customers_raw.parquet
+Produces 10,000 records → customers_raw.csv
 
 Install dependencies first:
     pip install faker pandas pyarrow
@@ -82,8 +82,8 @@ def main() -> None:
     df["updated_at"] = pd.to_datetime(df["updated_at"], utc=True)
     df["child_birthday"] = pd.to_datetime(df["child_birthday"], errors="coerce")
 
-    output_path = "customers_raw.parquet"
-    df.to_parquet(output_path, index=False, engine="pyarrow")
+    output_path = "customers_raw.csv"
+    df.to_csv(output_path, index=False)
 
     print(f"Saved → {output_path}")
     print(f"Shape : {df.shape[0]:,} rows × {df.shape[1]} columns")
