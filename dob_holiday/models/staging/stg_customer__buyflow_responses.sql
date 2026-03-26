@@ -3,9 +3,8 @@
 WITH source AS (
 
 	SELECT *
-	FROM {{source('buyflow_responses', 'customers_raw') }}
-
+	FROM read_parquet('./synth_file_generation/customers_raw.parquet')
 )
 
 SELECT *
-	FROM {{source('buyflow_responses', 'customers_raw') }}
+FROM source

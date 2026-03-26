@@ -1,0 +1,4 @@
+sources:
+  - name: buyflow_responses
+    tables:
+      - name: raw_customers
