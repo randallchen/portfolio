@@ -8,6 +8,7 @@ dependencies = [
     "dbt>=1.0.0.40.15",
     "dbt-core>=1.10.20",
     "dbt-duckdb>=1.10.0",
+    "duckdb>=1.4.4",
     "faker>=37.12.0",
     "numpy>=2.0.2",
     "pandas>=2.3.3",
