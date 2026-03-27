@@ -1,0 +1,13 @@
+sources:
+  - name: main
+    schema: main
+    config:
+      freshness:
+        warn_after:
+          count: 2
+          period: day
+    tables:
+      - name: raw_customers
+        config:
+          event_time: created_at
+

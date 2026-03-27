@@ -1,0 +1,18 @@
+models:
+  - name: mart_customers__braze_attributes
+    description: "Customer attributes prepared for Braze /users/track sync"
+    columns:
+      - name: external_id
+        description: "Braze user identifier"
+        tests:
+          - unique
+          - not_null
+      - name: email
+        tests:
+          - not_null
+      - name: child_age
+        description: >
+          Age of the customer's child in whole years. Populated only when the value
+          has changed within the last `child_age_sync_window_days` days (default 7),
+          as detected by the snp_int_customers__child_age snapshot. NULL otherwise,
+          causing push_to_braze to omit it from the Braze payload.
