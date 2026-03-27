@@ -3,23 +3,22 @@
 
 The purpose of this portfolio project is two-fold
 	
-	1. Show how to rETL (import) data to Braze
-	2. Demonstrate an ability to reliably query from APIs
+	1. Show how to rETL (export) data to Braze
+	2. Demonstrate an ability to reliably query APIs
 
 
 **Tools**
 - Orchestration: Prefect
 - Transformation/DQ: dbt
-- Read: DuckDB
+- Database: DuckDB
 
 
 
-## 1. Show how to rETL (import) data to Braze
-**Inputs**
-- Synthetic data file
+Show how to rETL (import) data to Braze
+- Generate a synthetic data file for customer buyflow responses
+- Derive child age 
+- Scaffold POSTing child age to Braze as a custom attribute for campaign segmentation
 
 
-
-## 2. Demonstrate an ability to reliably query from APIs
-**Inputs**
-- Something to do with ingested birthdays and holidays (https://github.com/vacanza/holidays)
+TODOs
+- handle multiple children edge case

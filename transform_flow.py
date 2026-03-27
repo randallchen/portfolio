@@ -195,6 +195,9 @@ def transform_flow(
     run_dbt_command("run", project_dir, profiles_dir, select="intermediate")
     run_dbt_command("test", project_dir, profiles_dir, select="intermediate")
 
+    # Step 3.5: snapshot — detect child_age changes for incremental Braze sync
+    run_dbt_command("snapshot", project_dir, profiles_dir)
+
     # Step 4: marts layer — shaped for Braze
     run_dbt_command("run", project_dir, profiles_dir, select="marts")
     run_dbt_command("test", project_dir, profiles_dir, select="marts")
