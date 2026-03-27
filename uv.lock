@@ -2962,7 +2962,7 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
-    { name = "dbt", specifier = ">=1.0.0.40.15" },
+    { name = "dbt", specifier = "==1.0.0.40.15" },
     { name = "dbt-core", specifier = "==1.9" },
     { name = "dbt-duckdb", specifier = "==1.9" },
     { name = "duckdb", specifier = ">=1.4.4" },

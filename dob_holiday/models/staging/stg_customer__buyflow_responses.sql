@@ -38,6 +38,6 @@ SELECT
 		postal_code,
 		child_birth_date,
 		created_at_utc,
-		updated_at_utc,
+		updated_at_utc
 FROM source
 WHERE rn = 1 -- Using row_number() to deduplicate any customers with same external_id

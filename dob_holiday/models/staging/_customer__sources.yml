@@ -8,6 +8,9 @@ sources:
           period: day
     tables:
       - name: raw_customers
-        config:
-          event_time: created_at
+        loaded_at_field: created_at
+        freshness: 
+          warn_after: 
+            count: 2
+            period: day
 
