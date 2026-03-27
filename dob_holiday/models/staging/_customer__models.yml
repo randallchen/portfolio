@@ -1,0 +1,16 @@
+models:
+  - name: stg_customer__buyflow_responses
+    description: "Staged customer records from buyflow responses"
+    columns:
+      - name: customer_id
+        description: "Primary key"
+        tests:
+          - unique
+          - not_null
+      - name: email
+        tests:
+          - not_null
+      - name: external_id
+        tests:
+          - unique
+          - not_null

@@ -14,8 +14,8 @@ import pandas as pd
 from faker import Faker
 
 fake = Faker("en_US")
-Faker.seed(42)
-random.seed(42)
+Faker.seed(420)
+random.seed(420)
 
 NUM_RECORDS = 10_000
 NOW = datetime.now(timezone.utc)
@@ -30,8 +30,8 @@ def random_past_datetime(start_year: int = 2018) -> datetime:
 
 
 def maybe_child_birthday() -> Optional[str]:
-    """~40% of customers have a child birthday on file."""
-    if random.random() < 0.40:
+    """~90% of customers have a child birthday on file."""
+    if random.random() < 0.90:
         return fake.date_of_birth(minimum_age=0, maximum_age=17).isoformat()
     return None
 

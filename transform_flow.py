@@ -85,7 +85,7 @@ def run_dbt_command(
 @flow(name="customer-transform-flow", log_prints=True)
 def transform_flow(
     parquet_path: str = "./synth_file_generation/customers_raw.parquet",
-    db_path: str = "./pipeline.duckdb",
+    db_path: str = "./dev.duckdb",
     raw_table: str = "raw_customers",
     project_dir: str = "./dob_holiday",
     profiles_dir: str = "../../.dbt",
@@ -102,6 +102,10 @@ def transform_flow(
     run_dbt_command("test", project_dir, profiles_dir, select="staging")
 
     # Step 3: marts layer — segments and computed attributes for Braze
+    run_dbt_command("run", project_dir, profiles_dir, select="intermediate")
+    run_dbt_command("test", project_dir, profiles_dir, select="intermediate")
+
+    # Step 4: marts layer — segments and computed attributes for Braze
     run_dbt_command("run", project_dir, profiles_dir, select="marts")
     run_dbt_command("test", project_dir, profiles_dir, select="marts")
 
