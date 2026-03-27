@@ -1,9 +1,11 @@
 -- int_customers.sql
 
 WITH customers_buyflow_responses AS (
-
-	SELECT 
+	SELECT
 		customer_id,
+		external_id,
+		first_name,
+		last_name,
 		email,
 		city,
 		state,
@@ -15,5 +17,17 @@ WITH customers_buyflow_responses AS (
 	FROM {{ ref('stg_customer__buyflow_responses')}}
 )
 
-SELECT *
+SELECT
+	customer_id,
+	external_id,
+	first_name,
+	last_name,
+	email,
+	city,
+	state,
+	country,
+	child_birth_date,
+	child_age,
+	created_at_utc,
+	updated_at_utc
 FROM customers_buyflow_responses

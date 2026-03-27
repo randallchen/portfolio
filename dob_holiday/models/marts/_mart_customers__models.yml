@@ -1,0 +1,12 @@
+models:
+  - name: mart_customers__braze_attributes
+    description: "Customer attributes prepared for Braze /users/track sync"
+    columns:
+      - name: external_id
+        description: "Braze user identifier"
+        tests:
+          - unique
+          - not_null
+      - name: email
+        tests:
+          - not_null

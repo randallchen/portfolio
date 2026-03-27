@@ -1,5 +1,7 @@
 -- stg_customer__buyflow_responses.sql
 
+
+
 WITH source AS(
 	SELECT 
 		customer_id,
@@ -38,4 +40,4 @@ SELECT
 		created_at_utc,
 		updated_at_utc,
 FROM source
-WHERE rn = 1
+WHERE rn = 1 -- Using row_number() to deduplicate any customers with same external_id
