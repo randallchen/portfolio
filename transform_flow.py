@@ -93,8 +93,6 @@ BRAZE_BATCH_SIZE = 75  # Braze /users/track hard limit per request
 def push_to_braze(db_path: str) -> None:
     logger = get_run_logger()
 
-
-# Don't have real credentials so this is only scaffolding 
     api_key = os.environ.get("BRAZE_API_KEY")
     rest_endpoint = os.environ.get("BRAZE_REST_ENDPOINT")
 
@@ -115,6 +113,7 @@ def push_to_braze(db_path: str) -> None:
             external_id,
             email,
             first_name,
+            last_name,
             city,
             state,
             country,
@@ -123,7 +122,7 @@ def push_to_braze(db_path: str) -> None:
     """).fetchall()
     conn.close()
 
-    columns = ["external_id", "email", "first_name", "city", "state", "country", "child_age"]
+    columns = ["external_id", "email", "first_name", "last_name", "city", "state", "country", "child_age"]
     total_rows = len(rows)
     logger.info(f"Fetched {total_rows:,} rows from mart_customers__braze_attributes")
 
@@ -133,6 +132,7 @@ def push_to_braze(db_path: str) -> None:
             "external_id": record["external_id"],
             "email":        record["email"],
             "first_name":   record["first_name"],
+            "last_name":    record["last_name"],
             "home_city":    record["city"],
             "state":        record["state"],
             "country":      record["country"],
